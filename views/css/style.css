@@ -730,39 +730,24 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .work {
   background-size: cover;
-  /* background-repeat: no-repeat; */
-  /* position: relative; */
   height: 270px;
   width: 100%;
   display: table;
   /* vertical-align: middle; */
   background: #fff;
   overflow: hidden;
+  transition-delay: 0.2s;
+
 }
 
 .work h3 {
   font-size: 20px;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  /* -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-  transition: transform 0.3s, opacity 0.3s; */
-  /* -webkit-transform: translate3d(0, -5px, 0);
-  transform: translate3d(0, -5px, 0); */
 }
 
 .work span {
   display: block;
   color: #999999;
   font-size: 14px;
-  /* -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s; */
-  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-  transition: transform 0.3s, opacity 0.3s;
-  transition: linear;
-  /* -webkit-transform: translate3d(0, 5px, 0);
-  transform: translate3d(0, 5px, 0); */
 }
 
 .work > div {
@@ -778,19 +763,13 @@ h1, h2, h3, h4, h5, h6, figure {
   display: inline-block;
   vertical-align: middle;
   background: #fff;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
   opacity: 0;
 
 }
 
-.work .desc > a {
+.work a.desc {
   position: relative;
-  border: 1px solid black;
-  border-radius: 5px;
-  color: black;
-  padding: 10px;
+  margin-top: 40%;
 }
 
 
@@ -799,11 +778,11 @@ h1, h2, h3, h4, h5, h6, figure {
     opacity: 1;
     background: rgba(255, 255, 255, 0.6);
   }
-  .work .desc h3 {
+  .work h3 {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
-  .work .desc span {
+  .work span {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
@@ -815,13 +794,8 @@ h1, h2, h3, h4, h5, h6, figure {
   /* -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); */
   visibility: hidden;
-  /* transition: all ease 0.8s; */
+  /* transition: all ease 0.2s; */
 }
-/* .work:hover .work span {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  opacity: 0;
-} */
 
 #fh5co-started {
   background-size: cover;
@@ -922,7 +896,7 @@ a.view-certifications {
   padding: 10px 20px;
 }
 
-.fh5co-blog .blog-text a.view-certifications:hover {
+a.view-certifications:hover {
   background: rgb(255, 144, 0);
   border: none;
   color: white;
