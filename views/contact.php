@@ -1,5 +1,5 @@
 <?php
-$myEmail = "stefitstoeva@gmail.com";
+$myEmail = "stefitstoeva@gmail.com"; //contact@stefistoeva.com
 $from = $_POST['email'];
 $firstName = $_POST['first_name'];
 $lastName = $_POST['last_name'];

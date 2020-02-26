@@ -736,18 +736,27 @@ h1, h2, h3, h4, h5, h6, figure {
   /* vertical-align: middle; */
   background: #fff;
   overflow: hidden;
-  transition-delay: 0.2s;
-
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .work h3 {
   font-size: 20px;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  -webkit-transform: translate3d(0, -15px, 0);
+  transform: translate3d(0, -15px, 0);
 }
 
 .work span {
   display: block;
   color: #999999;
   font-size: 14px;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  -webkit-transform: translate3d(0, 15px, 0);
+  transform: translate3d(0, 15px, 0);
 }
 
 .work > div {
@@ -764,14 +773,12 @@ h1, h2, h3, h4, h5, h6, figure {
   vertical-align: middle;
   background: #fff;
   opacity: 0;
-
 }
 
 .work a.desc {
   position: relative;
   margin-top: 40%;
 }
-
 
 @media screen and (max-width: 768px) {
   .work .desc {
@@ -787,14 +794,25 @@ h1, h2, h3, h4, h5, h6, figure {
     transform: translate3d(0, 0, 0);
   }
 }
+
 .work:hover .desc {
   opacity: 1;
 }
+
 .work:hover h3, .work:hover span {
-  /* -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); */
-  visibility: hidden;
-  /* transition: all ease 0.2s; */
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+
+.work:hover h3 {
+  -webkit-transform: translate3d(0, 15px, 0);
+  transform: translate3d(0, 15px, 0);
+}
+
+.work:hover span {
+  -webkit-transform: translate3d(0, -15px, 0);
+  transform: translate3d(0, -15px, 0);
 }
 
 #fh5co-started {
@@ -1305,6 +1323,7 @@ input[type="text"] {
   margin: auto;
 }
 
+/* 
 footer {
   padding: 30px;
-}
+} */
