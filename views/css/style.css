@@ -5,11 +5,7 @@
   font-weight: normal;
   font-style: normal;
 }
-/* =======================================================
-*
-* 	Template Style 
-*
-* ======================================================= */
+
 body {
   font-family: "Space Mono", Arial, serif;
   font-weight: 400;
@@ -386,6 +382,11 @@ h1, h2, h3, h4, h5, h6, figure {
   zoom: 1;
   *display: inline;
 }
+
+#fh5co-header > div.container li a i:hover {
+  color: #2F3C4F;
+}
+
 #fh5co-about .fh5co-social-icons li a {
   display: -moz-inline-stack;
   display: inline-block;
@@ -399,9 +400,11 @@ h1, h2, h3, h4, h5, h6, figure {
   -ms-border-radius: 2px;
   border-radius: 2px;
 }
+
 #fh5co-about .fh5co-social-icons li a i {
   font-size: 20px;
 }
+
 #fh5co-about .fh5co-social-icons li a:hover {
   background: #FF9000;
 }
@@ -726,6 +729,12 @@ h1, h2, h3, h4, h5, h6, figure {
 @media screen and (max-width: 480px) {
   .work {
     height: 270px;
+  }
+
+  /* phone? */
+  .work .desc {
+    position: relative;
+    margin-top: 70%;
   }
 }
 .work {
