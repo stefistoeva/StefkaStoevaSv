@@ -714,32 +714,22 @@ h1, h2, h3, h4, h5, h6, figure {
   top: 0;
 }
 
-/* .work {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  position: relative;
-  height: 270px;
-  width: 100%;
-  display: table;
-  overflow: hidden;
-} */
 @media screen and (max-width: 768px) {
   .work {
     height: 400px;
   }
 }
+
 @media screen and (max-width: 480px) {
   .work {
     height: 270px;
   }
 
-  /* phone? */
-  .work .desc {
-    position: relative;
-    margin-top: 70%;
+  h2 {
+    font-size: 38px !important;
   }
 }
+
 .work {
   background-size: cover;
   height: 270px;
@@ -759,6 +749,10 @@ h1, h2, h3, h4, h5, h6, figure {
   transition: transform 0.3s, opacity 0.3s;
   -webkit-transform: translate3d(0, -15px, 0);
   transform: translate3d(0, -15px, 0);
+}
+
+.work h3 a {
+  color: inherit;
 }
 
 .work span {
@@ -825,6 +819,18 @@ h1, h2, h3, h4, h5, h6, figure {
 .work:hover span {
   -webkit-transform: translate3d(0, -15px, 0);
   transform: translate3d(0, -15px, 0);
+}
+
+@media screen and (max-width: 480px) {
+  .col-md-3 .work .desc {
+    display: none;
+  }
+
+  .col-md-3 .work:hover h3, .col-md-3 .work:hover span {
+    opacity: 1;
+    transition: none;
+    transform: none;
+  }
 }
 
 #fh5co-started {
@@ -906,6 +912,13 @@ h1, h2, h3, h4, h5, h6, figure {
     padding: 10px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .fh5co-blog .blog-text {
+    padding: 20px;
+  }
+}
+
 .fh5co-blog .blog-text span {
   display: inline-block;
   margin-bottom: 20px;
