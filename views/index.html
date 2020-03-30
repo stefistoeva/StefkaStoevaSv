@@ -41,6 +41,7 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+	<script src="./validations.js"></script>
 
 	</head>
 	<body>
@@ -84,7 +85,8 @@
 					<ul class="info">
 						<li><span class="first-block">Full Name:</span><span class="second-block">Stefka Todorova Stoeva</span></li>
 						<li><span class="first-block">Phone:</span><span class="second-block">+359888031142</span></li>
-						<li><span class="first-block">Email:</span><span class="second-block">contact@stefistoeva.com</span></li>
+						<!-- contact@stefistoeva.com -->
+						<li><span class="first-block">Email:</span><span class="second-block">stefitstoeva@gmail.com</span></li>
 						<li><span class="first-block">Website:</span><span class="second-block">www.stefistoeva.com</span></li>
 					</ul>
 				</div>
@@ -473,33 +475,32 @@
 		</div>
 	</div>
 
-	<div id="fh5co-consult">		
+	<!-- <div id="fh5co-consult">		
 		<div class="choose animate-box">
 			<h2>Send me email!</h2>
-			<form action="./contact.php" method="POST">
-				<!-- <form action="C:\xampp\htdocs\contact.php" method="POST"> -->
+			<form action="./contact.php" method="POST" name="contactMe">
 
 				<div class="row form-group">
 					<div class="col-md-6">
-						<input type="text" id="lname" class="form-control" name="company" placeholder="Company">
+						<input type="text" id="lname" class="form-control" name="company" placeholder="Company" required>
 					</div>
 				</div>
 
 				<div class="row form-group">
 					<div class="col-md-12">
-						<input type="text" id="email" class="form-control" name="email" placeholder="Email address">
+						<input type="text" id="email" class="form-control" name="email" placeholder="Email address" required>
 					</div>
 				</div>
 
 				<div class="row form-group">
 					<div class="col-md-12">
-						<input type="text" id="subject" class="form-control" name="subject" placeholder="Subject of this message">
+						<input type="text" id="subject" class="form-control" name="subject" placeholder="Subject of this message" required>
 					</div>
 				</div>
 
 				<div class="row form-group">
 					<div class="col-md-12">
-						<textarea name="message" id="message" cols="30" rows="10" class="form-control" name="message" placeholder="..."></textarea>
+						<textarea name="message" id="message" cols="30" rows="10" class="form-control" name="message" placeholder="..." required></textarea>
 					</div>
 				</div>
 				<div class="form-group">
@@ -507,7 +508,7 @@
 				</div>
 			</form>	
 		</div>
-	</div>
+	</div> -->
 	
 	<!-- <footer> -->
 		<div id="fh5co-started" class="fh5co-bg-dark" style="padding-bottom: 30px; padding-top: 50px;">
