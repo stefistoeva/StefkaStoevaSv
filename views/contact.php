@@ -1,43 +1,52 @@
 <?php
-var_dump($_POST);
-exit;
-$myEmail = "stefitstoeva@gmail.com"; //contact@stefistoeva.com
-$from = $_POST['email'];
-$company = $_POST['company'];
-$subject = $_POST['subject'];
-$message = $_POST['message']; 
+ini_set("include_path", '/home/demcdads/php:' . ini_get("include_path") );
 
-if(isset($_POST['submit']) && $from && $company && $subject && $message) {
-    $headers = "From:" . $from;
-    var_dump($headers);
-    // Always set content-type when sending HTML email
-    // $headers = "MIME-Version: 1.0" . "\r\n";
-    // $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    // // More headers
-    // $headers .= 'From: Admin <admin@websapex.com>' . "\r\n"; // Give an email id on which you want get a reply. User will get a mail from this email id
-    // $headers .= 'Cc: info@websapex.com' . "\r\n"; // If you want add cc
-    // $headers .= 'Bcc: boss@websapex.com' . "\r\n"; // If you want add Bcc
+if(isset($_POST['email'])) {
+  ini_set("include_path", '/home/demcdads/php:' . ini_get("include_path") );
 
-    // mail($myEmail, $subject, $message, $headers);
+  require_once "Mail.php";
 
-    // Please specify your Mail Server - Example: mail.example.com.
-    // ini_set("SMTP","mail.example.com");
+  $host = "mail.bulmat-bg.com";
+  $username = "contact@bulmat-bg.com";
+  $password = "namekadiiski";
+  $port = "587";
 
-    // Please specify an SMTP Number 25 and 8889 are valid SMTP Ports.
-    // ini_set("smtp_port","25");
+  $to = "stefitstoeva@gmail.com";
+  $email_from = "contact@stefi-stoeva.info"; //?$email = $_POST['email'];
+  $email_subject = $_POST['subject'] ?? 'StefiCV';
+  $email_body = isset($_POST['message']) ? htmlspecialchars($_POST['message']) : 'no message';
+//   $email_body = wordwrap($email_body,70);
+  $email_address = "stefitstoeva@gmail.com";
 
-    // Please specify the return address to use
-    // ini_set('sendmail_from', 'example@YourDomain.com');
 
-    // mail($to,$subject,$message,$headers)
-    // if(mail($to,$subject,$message,$headers)){
-    //     echo "<script>
-    //             alert('Mail has been sent Successfully.');
-    //         </script>";
-    // } else{
-    //     echo "<script>
-    //             alert('EMAIL FAILED');
-    //         </script>";
-    // }
+  //validate email
+  // if(!filter_var($email_from, FILTER_VALIDATE_EMAIL)) {}
+
+
+  $headers = array('From' => $email_from, 'To' => $to, 'Subject' => $email_subject, 'Reply-To' => $email_address);
+  $smtp = Mail::factory('smtp', array('host' => $host, 'port' => $port, 'auth' => true, 'socket_options' => array('ssl' => array('verify_peer_name' => false, 'allow_self_signed' => true)), 'username' => $username, 'password' => $password));
+  $mail = $smtp->send($to, $headers, $email_body);
 }
-?>
+
+header('Location: /?send=1');
+
+
+// <?php
+// $email = $_POST['email'];
+// $company = $_POST['company'];
+// // $subject = $_POST['subject'];
+// // $message = $_POST['message']; 
+
+//     // mail($to,$subject,$message,$headers)
+//     if(mail($myEmail, $subject, $message, $headers)){
+//         echo "<script>
+//                 alert('Mail has been sent Successfully.');
+//             </script>";
+//         header('Location: /');
+//     } else{
+//         echo "<script>
+//                 alert('EMAIL FAILED');
+//             </script>";
+//     }
+// }
+// ?>

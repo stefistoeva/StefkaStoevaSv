@@ -85,9 +85,8 @@
 					<ul class="info">
 						<li><span class="first-block">Full Name:</span><span class="second-block">Stefka Todorova Stoeva</span></li>
 						<li><span class="first-block">Phone:</span><span class="second-block">+359888031142</span></li>
-						<!-- contact@stefistoeva.com -->
-						<li><span class="first-block">Email:</span><span class="second-block">stefitstoeva@gmail.com</span></li>
-						<li><span class="first-block">Website:</span><span class="second-block">www.stefistoeva.com</span></li>
+						<li><span class="first-block">Email:</span><span class="second-block">contact@stefistoeva.com</span></li>
+						<li><span class="first-block">Website:</span><span class="second-block">www.stefi-stoeva.info/</span></li>
 					</ul>
 				</div>
 				<div class="col-md-8">
@@ -100,8 +99,8 @@
 					</p>
 					<p>I want to develop and grow. I have experience with:
 						PHP and Object-Oriented PHP versions, MVC Framework – Symfony, template engine – Twig, relational databases like a MySQL, source control 
-						systems such as GIT – GitHub, Linux operation system, HTML5, CSS, JavaScript, TypeScript, SPA, Bootstrap 4, template Handlebars, control management system
-						– Drupal, Baass platform like Firebase.
+						systems such as GIT – GitHub, Linux operation system, HTML5, CSS, Jekyll, JavaScript, TypeScript, SPA, Bootstrap 4, template Handlebars, control management system
+						– Drupal, Baass platform like Firebase, Python, Django Rest Api.
 					</p>
 					<p>
 						<ul class="fh5co-social-icons">
@@ -475,11 +474,14 @@
 		</div>
 	</div>
 
-	<!-- <div id="fh5co-consult">		
+	<div id="fh5co-consult">		
 		<div class="choose animate-box">
+				<div id="alertDanger" class="alert alert-danger" role="alert" hidden>
+						This is a danger alert—check it out!
+				</div>
 			<h2>Send me email!</h2>
-			<form action="./contact.php" method="POST" name="contactMe">
-
+			<form action="./contact.php" method="POST" name="contactMe" onsubmit="return validateForm()">
+				
 				<div class="row form-group">
 					<div class="col-md-6">
 						<input type="text" id="lname" class="form-control" name="company" placeholder="Company" required>
@@ -508,7 +510,7 @@
 				</div>
 			</form>	
 		</div>
-	</div> -->
+	</div>
 	
 	<!-- <footer> -->
 		<div id="fh5co-started" class="fh5co-bg-dark" style="padding-bottom: 30px; padding-top: 50px;">
