@@ -28,7 +28,7 @@ if(isset($_POST['email'])) {
   $mail = $smtp->send($to, $headers, $email_body);
 }
 
-header('Location: /?send=1');
+header('Location: /');
 
 
 // <?php
