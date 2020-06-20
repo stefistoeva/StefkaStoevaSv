@@ -12,7 +12,7 @@ if(isset($_POST['email'])) {
   $port = "587";
 
   $to = "stefitstoeva@gmail.com";
-  $email_from = "contact@stefi-stoeva.info"; //?$email = $_POST['email'];
+  $email_from = $_POST['email'] ?? 'noname'; //?$email = $_POST['email'];
   $email_subject = $_POST['subject'] ?? 'StefiCV';
   $email_body = isset($_POST['message']) ? htmlspecialchars($_POST['message']) : 'no message';
 //   $email_body = wordwrap($email_body,70);
